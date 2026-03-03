@@ -1,0 +1,12 @@
+<h2 class="page-title">Rutinas</h2>
+
+<mat-nav-list *ngIf="(data.base$ | async) as base">
+  <a
+    mat-list-item
+    *ngFor="let r of base.routines"
+    [routerLink]="['/rutinas', r.id]"
+  >
+    <span matListItemTitle>{{ r.name }}</span>
+    <span matListItemLine>{{ r.items.length }} ejercicios</span>
+  </a>
+</mat-nav-list>

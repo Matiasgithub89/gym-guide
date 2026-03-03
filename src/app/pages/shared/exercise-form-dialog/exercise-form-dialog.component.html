@@ -1,0 +1,36 @@
+<h2 mat-dialog-title>Agregar ejercicio</h2>
+
+<div mat-dialog-content class="content">
+  <mat-form-field appearance="outline" class="full">
+    <mat-label>Nombre</mat-label>
+    <input matInput formControlName="name" placeholder="Ej: Curl de bíceps con barra" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full">
+    <mat-label>ID</mat-label>
+    <input matInput formControlName="id" placeholder="auto-generado" />
+    <mat-hint>Se usa para referenciarlo en rutinas (conviene no cambiarlo después).</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full">
+    <mat-label>Músculos (separados por coma)</mat-label>
+    <input matInput formControlName="muscles" placeholder="biceps, antebrazo" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full">
+    <mat-label>Thumbnail (opcional)</mat-label>
+    <input matInput formControlName="thumbnail" placeholder="assets/exercises/thumbs/..." />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full">
+    <mat-label>Imagen (opcional)</mat-label>
+    <input matInput formControlName="image" placeholder="assets/exercises/..." />
+  </mat-form-field>
+</div>
+
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="cancel()">Cancelar</button>
+  <button mat-flat-button color="primary" (click)="save()" [disabled]="form.invalid">
+    Guardar
+  </button>
+</div>

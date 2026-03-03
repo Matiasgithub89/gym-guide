@@ -1,0 +1,35 @@
+<ng-container *ngIf="(data.base$ | async) as base">
+  <ng-container *ngIf="routineId as id">
+    <ng-container *ngIf="findRoutine(base.routines, id) as routine">
+
+      <div class="page-header">
+        <h2>{{ routine.name }}</h2>
+        <span class="subtitle">{{ routine.items.length }} ejercicios</span>
+      </div>
+
+      <div class="exercise-list">
+        <div
+          class="exercise-item"
+          *ngFor="let item of routine.items"
+          (click)="openExercise(item.exerciseId, item.sets, item.reps, item.weightKg, base.exercises)"
+        >
+          <img class="thumb" [src]="exerciseThumb(item.exerciseId, base.exercises)" alt="" />
+
+          <div class="info">
+            <div class="title">
+              {{ exerciseName(item.exerciseId, base.exercises) }}
+            </div>
+
+            <div class="details">
+              {{ item.sets }}x{{ item.reps }}
+              <ng-container *ngIf="item.weightKg">
+                · {{ item.weightKg }} kg
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </ng-container>
+  </ng-container>
+</ng-container>

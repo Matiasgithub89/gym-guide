@@ -1,0 +1,23 @@
+<div class="page-header">
+  <div>
+    <h2>Ejercicios</h2>
+    <div class="subtitle">Tu catálogo de ejercicios conocidos</div>
+  </div>
+
+  <button mat-flat-button color="primary" (click)="openAddDialog()">
+    + Agregar
+  </button>
+</div>
+
+<mat-nav-list *ngIf="(exercises$ | async) as exercises">
+  <a mat-list-item *ngFor="let ex of exercises; trackBy: trackById">
+    <img matListItemAvatar [src]="placeholderThumb(ex)" alt="" />
+    <span matListItemTitle>{{ ex.name }}</span>
+
+    <span matListItemLine>
+      <mat-chip-set *ngIf="ex.muscles?.length">
+        <mat-chip *ngFor="let m of ex.muscles">{{ m }}</mat-chip>
+      </mat-chip-set>
+    </span>
+  </a>
+</mat-nav-list>
