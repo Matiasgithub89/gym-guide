@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "exercises": [
+    {
+      "id": "curl-biceps-barra",
+      "name": "Curl de bíceps con barra",
+      "thumbnail": "assets/exercises/thumbs/curl-biceps-barra.png",
+      "image": "assets/exercises/curl-biceps-barra.png",
+      "muscles": ["biceps"]
+    },
+    {
+      "id": "elevaciones-laterales-mancuernas",
+      "name": "Elevaciones laterales con mancuernas",
+      "thumbnail": "assets/exercises/thumbs/elevaciones-laterales-mancuernas.png",
+      "image": "assets/exercises/elevaciones-laterales-mancuernas.png",
+      "muscles": ["deltoide-medio"]
+    },
+    {
+      "id": "extension-triceps-sentado",
+      "name": "Extensión de tríceps sentado",
+      "thumbnail": "assets/exercises/thumbs/extension-triceps-sentado.png",
+      "image": "assets/exercises/extension-triceps-sentado.png",
+      "muscles": ["triceps"]
+    },
+    {
+      "id": "extensiones-piernas",
+      "name": "Extensiones de piernas",
+      "thumbnail": "assets/exercises/thumbs/extensiones-piernas.png",
+      "image": "assets/exercises/extensiones-piernas.png",
+      "muscles": ["cuadriceps"]
+    },
+    {
+      "id": "press-banca-plano",
+      "name": "Press banca plano",
+      "thumbnail": "assets/exercises/thumbs/press-banca-plano.png",
+      "image": "assets/exercises/press-banca-plano.png",
+      "muscles": ["pecho", "triceps"]
+    },
+    {
+      "id": "press-banca-inclinado",
+      "name": "Press banca inclinado",
+      "thumbnail": "assets/exercises/thumbs/press-banca-inclinado.png",
+      "image": "assets/exercises/press-banca-inclinado.png",
+      "muscles": ["pecho-superior", "triceps"]
+    },
+    {
+      "id": "press-militar-barra-sentado",
+      "name": "Press militar con barra sentado",
+      "thumbnail": "assets/exercises/thumbs/press-militar-barra-sentado.png",
+      "image": "assets/exercises/press-militar-barra-sentado.png",
+      "muscles": ["deltoides", "triceps"]
+    }
+  ],
+  "routines": [
+    {
+      "id": "rutina-1",
+      "name": "Rutina 1",
+      "items": [
+        { "exerciseId": "press-banca-plano", "sets": 4, "reps": 10, "weightKg": 30 },
+        { "exerciseId": "press-banca-inclinado", "sets": 4, "reps": 10, "weightKg": 25 },
+        { "exerciseId": "press-militar-barra-sentado", "sets": 4, "reps": 10, "weightKg": 15 },
+        { "exerciseId": "elevaciones-laterales-mancuernas", "sets": 4, "reps": 10, "weightKg": 4 },
+        { "exerciseId": "extensiones-piernas", "sets": 4, "reps": 10, "weightKg": 35 },
+        { "exerciseId": "curl-biceps-barra", "sets": 4, "reps": 10, "weightKg": 15 },
+        { "exerciseId": "extension-triceps-sentado", "sets": 4, "reps": 10 }
+      ]
+    }
+  ]
+}
