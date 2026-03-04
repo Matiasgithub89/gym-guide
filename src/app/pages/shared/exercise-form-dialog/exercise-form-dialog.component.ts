@@ -26,10 +26,9 @@ function slugify(input: string): string {
     MatButtonModule
   ],
   templateUrl: './exercise-form-dialog.component.html',
-  styleUrl: './exercise-form-dialog.component.scss'
+  styleUrls: ['./exercise-form-dialog.component.scss']
 })
 export class ExerciseFormDialogComponent {
-
   private fb = inject(FormBuilder);
   private dialogRef = inject(MatDialogRef<ExerciseFormDialogComponent>);
 
